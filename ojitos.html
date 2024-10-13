@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ojo que sigue el mouse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="head">
+        <div class="eye left-eye">
+          <div class="pupil"></div>
+        </div>
+        <div class="eye right-eye">
+          <div class="pupil"></div>
+        </div>
+      </div>
+
+  <script src="script.js"></script>
+
+
+  <script>
+// script.js
+document.addEventListener('mousemove', (event) => {
+    const leftEye = document.querySelector('.left-eye .pupil');
+    const rightEye = document.querySelector('.right-eye .pupil');
+    
+    const eyes = document.querySelectorAll('.eye');
+  
+    eyes.forEach((eye) => {
+      const eyeRect = eye.getBoundingClientRect();
+      const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+      const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+  
+      // Calcular el ángulo entre el centro del ojo y el mouse
+      const deltaX = event.clientX - eyeCenterX;
+      const deltaY = event.clientY - eyeCenterY;
+      const angle = Math.atan2(deltaY, deltaX);
+  
+      // Calcular el desplazamiento de la pupila
+      const maxDistance = 20; // Distancia máxima que la pupila puede moverse dentro del ojo
+      const pupilX = maxDistance * Math.cos(angle);
+      const pupilY = maxDistance * Math.sin(angle);
+  
+      // Mover la pupila
+      const pupil = eye.querySelector('.pupil');
+      pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+    });
+  });
+  
+  
+  </script>
+</body>
+</html>
+<style>
+ /* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+  
+  .head {
+    width: 200px;
+    height: 200px;
+    background-color: #ffcc99;
+    border-radius: 50%;
+    position: relative;
+    border: 5px solid #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .eye {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .pupil {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px; /* Centrando la pupila */
+    left: 20px;
+  }
+  
+  /* Posición específica de los ojos */
+  .left-eye {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+  }
+  
+  .right-eye {
+    position: absolute;
+    right: 30px;
+    top: 60px;
+  }
+  
+  
+</style>

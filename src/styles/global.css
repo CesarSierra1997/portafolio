@@ -1,0 +1,108 @@
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #ojos{
+    
+    position: absolute;
+    top: -15px;
+    right: 80px;
+} */
+  /* .eye {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .pupil {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    position: relative;
+    top: 10px; 
+    left: 10px;
+  }
+  
+ 
+  .left-eye {
+    position: relative;
+    left: 20px;
+    top: 40px;
+  }
+  
+  .right-eye {
+    position: relative;
+    right: 20px;
+    top: 40px;
+  }
+  
+
+
+html {
+}
+
+body {
+    transition: transform 0.5s ease-in-out;
+} */
+/* 
+#titulo {
+    background: linear-gradient(90deg, rgba(178,104,227,1) 0%, rgba(252,55,55,1) 50%, rgba(255,190,100,1) 100%);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    padding: 0.1em 0; 
+    line-height: 1.2; 
+} */
+
+@keyframes gradient-shift {
+    0% {
+      background-position: 10% 50%;
+    }
+    50% {
+      background-position: 80% 50%;
+    }
+    100% {
+      background-position: 10% 50%;
+    }
+  }
+  
+#titulo {
+    background: linear-gradient(90deg, rgba(178,104,227,1) 0%, rgba(252,55,55,1) 50%, rgba(255,190,100,1) 100%);
+    background-size: 200% 200%; /* Para permitir el desplazamiento del gradiente */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    padding: 0.1em 0; 
+    line-height: 1.2; 
+    animation: gradient-shift 3s ease infinite; /* Duración de la animación */
+}
+  
+
+.pug_love{
+  position: fixed;
+  width: 50px;
+  height: auto;
+  top: -2px;
+  right: 450px;
+  display: block; 
+}
+
+/* Ocultar en dispositivos móviles */
+@media (max-width: 768px) {
+   .pug_love {
+       display: none; /* Ocultar en pantallas pequeñas */
+   }
+}
+
+.perro_coffe{
+  display: block; 
+}
+
+@media (max-width: 510px) {
+   .perro_coffe {
+    width: 30%;
+   }
+}

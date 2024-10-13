@@ -1,0 +1,72 @@
+---
+const personalImageAlt = "Cesar Sierra"
+import Badge from "../components/Badge.astro"
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import MailIcon from "../components/icons/Mail.astro"
+import CvIcon from "../components/icons/Cv.astro"
+import SocialPill from "../components/SocialPill.astro"
+---
+
+<div class="max-w-3xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="/cesar_sf.png"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/cesar-sierra-dev/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+
+  <!-- Título centrado -->
+  <h1
+  id="titulo"
+  class="animate-text text-4xl font-bold tracking-tight sm:text-5xl"
+>
+  Desarrollador web full stack
+</h1>
+
+
+
+  <!-- Contenedor para el párrafo y el GIF -->
+  <div class="flex flex-col md:flex-row items-start justify-between mt-6">
+    <!-- Párrafo de descripción -->
+    <p
+      class="text-xl text-gray-800 dark:[&>strong]:text-orange-500 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 md:w-3/4"
+    >
+      Hola, soy Cesar desarrollador junior con +2 años de experiencia. <strong
+        >Tecnólogo en análisis y desarrollo de software</strong> de Bogotá, Colombia co. Especializado en desarrollo de aplicaciones y sitios web.
+    </p>
+    
+    <!-- GIF alineado con el párrafo -->
+    <div class="md:w-1/6 flex justify-end" style="bottom: 150px;">
+      <img
+        class="perro_coffe px-2 h-auto"
+        src="/pug_coffe.gif"
+        alt={personalImageAlt}
+      />
+    </div>
+  </div>
+
+  <!-- Navegación de redes sociales -->
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:cesarmallungo@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/cesar-sierra-dev/">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="">
+      <CvIcon class="size-4" />
+      CV
+    </SocialPill>
+  </nav>
+</div>

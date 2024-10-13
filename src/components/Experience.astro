@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente",
+    title: "Freelance",
+    company: "cesarsierraweb.com",
+    description:
+      "Desarrollar aplicaciones y websites atractivas, novedosas y de alto impacto. Llevar a cabo su proyecto de software de principio a fin",
+  },
+  {
+    date: "Octubre 2024",
+    title: "Desarrollador full stack",
+    company: "SENA CGMLTI",
+    description:
+      "Gestionar proyectos de sotfware, para el SENA (centro de gestión de mercados logística y tecnologías de la información), desarrollar aplicaciones web, realizar su debida documentación, levantamiento de requerimeientos y pruebas de aceptación con el cliente final.",
+    link: "https://www.linkedin.com/in/cesar-sierra-dev/overlay/1719465558793/single-media-viewer/?profileId=ACoAAEFNTuIBRjb-VFXal-FHP4gx9byA8PsaQYk",
+  },
+  {
+    date: "2017, Noviembre 2023",
+    title: "Diseñador website",
+    company: "Apostilla Colombia Traducciones Oficiales",
+    description:
+      "Responsable del website desarrollado con cms wordpress, mejoras, actualizaciones e intregación de nuevos plugins. Publicidad digital, implementación de campañas, anuncios en la red de busqueda de google ads",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
