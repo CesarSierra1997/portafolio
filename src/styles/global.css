@@ -3,60 +3,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* #ojos{
-    
-    position: absolute;
-    top: -15px;
-    right: 80px;
-} */
-  /* .eye {
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    border: 3px solid #000;
-    border-radius: 50%;
-    position: relative;
-  }
-  
-  .pupil {
-    width: 20px;
-    height: 20px;
-    background-color: #000;
-    border-radius: 50%;
-    position: relative;
-    top: 10px; 
-    left: 10px;
-  }
-  
- 
-  .left-eye {
-    position: relative;
-    left: 20px;
-    top: 40px;
-  }
-  
-  .right-eye {
-    position: relative;
-    right: 20px;
-    top: 40px;
-  }
-  
+@import '/node_modules/slick-carousel/slick/slick.css'; 
+@import '/node_modules/slick-carousel/slick/slick-theme.css';
+/* slider1 */
+.slick-slide div {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.4s ease;
+}
+
+.slick-slide:hover div {
+  transform: scale(1.1);
+}
+
+.slick-slide i:hover {
+  transform: rotate(10deg);
+}
+
+/* Estilos para el ícono de Astro */
+.iconosJx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Ajusta según sea necesario */
+  height: 50px; /* Ajusta según sea necesario */
+}
+
+/* slider2 */
+.slider-container {
+  font-size: 10px;
+}
 
 
-html {
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+:root {
+  --background-color: white;
+  --text-color: black;
+}
+
+.dark {
+  --background-color: #1a202c;
+  --text-color: beige;
+  color: beige;
 }
 
 body {
-    transition: transform 0.5s ease-in-out;
-} */
-/* 
-#titulo {
-    background: linear-gradient(90deg, rgba(178,104,227,1) 0%, rgba(252,55,55,1) 50%, rgba(255,190,100,1) 100%);
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    padding: 0.1em 0; 
-    line-height: 1.2; 
-} */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
 
 @keyframes gradient-shift {
     0% {
@@ -106,3 +103,38 @@ body {
     width: 30%;
    }
 }
+
+
+/*Boton WhatsApp*/
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s, transform 0.3s;
+  position: fixed; /* Fija el botón a la derecha */
+  bottom: 30px; /* Ajusta la posición vertical */
+  right: 20px; /* Ajusta la posición horizontal */
+}
+
+.btn-whatsapp:hover {
+  background-color: rgba(3, 156, 72, 0.781);
+  transform: scale(1.1);
+}
+
+.btn-whatsapp i {
+  font-size: 2.5rem;
+}
+
+.btn-whatsapp:active {
+  transform: scale(0.95);
+}
+
+
+

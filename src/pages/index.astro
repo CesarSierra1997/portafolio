@@ -12,6 +12,7 @@ import SectionContainer from "../components/SectionContainer.astro"
 import Hero from "../components/Hero.astro"
 import TitleSection from "../components/TitleSection.astro"
 import ContactMe from "../components/Contact.astro"
+import Slider from "../components/Slider.astro"
 
 const personalImageAlt = "Cesar Sierra"
 
@@ -41,12 +42,21 @@ const personalImageAlt = "Cesar Sierra"
       <Experience />
     </SectionContainer>
 
+
     <SectionContainer id="proyectos">
       <TitleSection>
         <CodeIcon class="size-8" />
         Proyectos de software
       </TitleSection>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="tegnologias">
+      <TitleSection>
+        <i class="fa-brands fa-uncharted"></i>
+        Tecnologias
+      </TitleSection>
+      <Slider />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
@@ -64,6 +74,17 @@ const personalImageAlt = "Cesar Sierra"
 		</TitleSection>
 		<ContactMe />
 	</SectionContainer>
+
+  <a 
+  href="https://wa.me/573213162622?text=¡Hola!%20Quisiera%20más%20información."
+  class="btn-whatsapp"
+  target="_blank"
+  rel="noopener noreferrer"
+  >
+  <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+
   </div>
   </main>
 </Layout>
