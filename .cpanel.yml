@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/$CPANELUSER/public_html
-    - /bin/cp -r dist/* $DEPLOYPATH
+    - export DEPLOYPATH=/home/ucesarsu4/public_html
+    - /bin/cp -R dist/* $DEPLOYPATH

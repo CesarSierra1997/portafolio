@@ -55,7 +55,7 @@ const PROJECTS = [
       "Gestión del proyecto fabrica de encuestas, para el area de comunicaciones del SENA CGMLTI (In house 52). Desarrollo de una aplicación web, realizando un sistema de encuestas con interfaz pública y privada, 2 roles (admin y user), gestión de usuarios y encuestas, con respuesta de tipo pública y privada, desarrollada en python con django apps. Realización de la documentación del proyecto, pruebas de aceptación, presentación y despliegue en data center.",
     link: "https://django-appencuestas.onrender.com/",
     github: "https://github.com/CesarSierra1997/DjangoProject-FabricadeEncuestas",
-    image: "/projects/app_encuestas.png",
+    image: "/projects/app_encuestas.webp",
     tags: [TAGS.DJANGO, TAGS.BOOTSTRAP, TAGS.JQUERY],
   },
   {
@@ -63,7 +63,7 @@ const PROJECTS = [
     description:
       "Desarrollo de chats bots para whatsapp, mensajes automaticos, menu de negocio perzonalizable, simulador de escritura para mejorar el bot, integración para envio de archivos: pdf, excel, word, jpg, png, video y audio",
     whatsapp: "https://github.com/CesarSierra1997/DjangoProject-FabricadeEncuestas",
-    image: "/projects/chatbot.png",
+    image: "/projects/chatbot.webp",
     tags: [TAGS.JAVASCRIPT],
   },
   {
@@ -71,7 +71,7 @@ const PROJECTS = [
     description:
       "Portafolio web desarrollado con Astro y Tailwind CSS.",
     github: "https://github.com/CesarSierra1997/DjangoProject-FabricadeEncuestas",
-    image: "/projects/portafolio_web.png",
+    image: "/projects/portafolio_web.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND],
   },
 ]
@@ -82,9 +82,8 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github, whatsapp }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Proyectos"   loading="lazy" src={image} />
-      
+    <div id="proyectos" style="border-radius: 10px;">
+      <img alt="Proyectos"  style="border-radius: 10px;" loading="lazy" src={image} />
     </div>
   </div>
 

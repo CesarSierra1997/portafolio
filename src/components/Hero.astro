@@ -11,7 +11,7 @@ import SocialPill from "../components/SocialPill.astro"
   <div class="flex gap-4 mb-4">
     <img
       class="rounded-full shadow-lg size-16"
-      src="/cesar_sf.png"
+      src="/cesar_hero.webp"
       alt={personalImageAlt}
     />
     <a
@@ -38,7 +38,7 @@ import SocialPill from "../components/SocialPill.astro"
   <div class="flex flex-col md:flex-row items-start justify-between mt-6">
     <!-- Párrafo de descripción -->
     <p
-      class="text-xl text-gray-800 dark:[&>strong]:text-orange-500 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 md:w-3/4"
+      class="description"
     >
       Hola, soy Cesar desarrollador junior con +2 años de experiencia. <strong
         >Tecnólogo en análisis y desarrollo de software</strong> de Bogotá, Colombia co. Especializado en desarrollo de aplicaciones y sitios web.
@@ -48,8 +48,8 @@ import SocialPill from "../components/SocialPill.astro"
     <div class="md:w-1/6 flex justify-end" style="bottom: 150px;">
       <img
         class="perro_coffe px-2 h-auto"
-        src="/pug_coffe.gif"
-        alt={personalImageAlt}
+        src="/pug_coffe.webp"
+        alt={personalImageAlt} loading="lazy"
       />
     </div>
   </div>
@@ -64,7 +64,7 @@ import SocialPill from "../components/SocialPill.astro"
       <LinkedInIcon class="size-4" />
       LinkedIn
     </SocialPill>
-    <SocialPill href="">
+    <SocialPill href="https://www.canva.com/design/DAFuLTtviok/1BlC1DqPyFWViNeBlVM6Xg/edit?utm_content=DAFuLTtviok&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
       <CvIcon class="size-4" />
       CV
     </SocialPill>

@@ -6,6 +6,7 @@ import Briefcase from "../components/icons/Briefcase.astro"
 import CodeIcon from "../components/icons/Code.astro"
 import Experience from "../components/Experience.astro"
 import ProfileCheck from "../components/icons/ProfileCheck.astro"
+import Wp from "../components/icons/react/WhatsAppButtom.jsx"
 import Contact from "../components/icons/Contact.astro"
 import Projects from "../components/Projects.astro"
 import SectionContainer from "../components/SectionContainer.astro"
@@ -22,11 +23,10 @@ const personalImageAlt = "Cesar Sierra"
   title="Portafolio"
   description="Contácta a Cesar para tus desarrollos web"
 >
-  <main class="px-4">
+  <main  class="px-4 flex-grow">
     <img class="pug_love"
-    src="/pug_love.gif"
-    alt={personalImageAlt}
-  />
+    src="/pug_love.webp"
+    alt={personalImageAlt} loading="lazy"/>
 
     <SectionContainer class="py-16 md:py-36">
       <Hero>
@@ -81,7 +81,7 @@ const personalImageAlt = "Cesar Sierra"
   target="_blank"
   rel="noopener noreferrer"
   >
-  <i class="fa-brands fa-whatsapp"></i>
+  <Wp />
   </a>
 
 
