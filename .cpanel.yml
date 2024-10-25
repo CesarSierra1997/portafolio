@@ -2,4 +2,13 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ucesarsu4/public_html
-    - /bin/cp -R dist/* $DEPLOYPATH
+    # Comprime el contenido de la carpeta dist en un archivo zip
+    - /bin/zip -r dist.zip dist/*
+    # Mueve el archivo dist.zip al directorio de despliegue
+    - /bin/cp dist.zip $DEPLOYPATH
+    # Se posiciona en el directorio de despliegue
+    - cd $DEPLOYPATH
+    # Extrae el contenido del archivo dist.zip directamente en el directorio de despliegue
+    - /bin/unzip -o dist.zip
+    # Elimina el archivo dist.zip después de la extracción
+    - /bin/rm dist.zip
