@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ucesarsu4/portafolio.cesarsierraweb.com
+    - export DEPLOYPATH=/home/ucesarsu4/portafolio
     - /bin/cp -R dist/* $DEPLOYPATH
